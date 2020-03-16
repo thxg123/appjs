@@ -1,7 +1,1 @@
-function escape(val){
-return getescape(val);
-}
-
-function alert(val){
-api.alert({msg:val});
-}
+alert("最新版本");

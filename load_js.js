@@ -35,7 +35,6 @@ function url_sqldb(url, params, header, referer, cookie, getua2) {
 };
 
 
-
 function escape(val){
 return getescape(val);
 };

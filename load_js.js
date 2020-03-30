@@ -42,11 +42,3 @@ return getescape(val);
 function alert(val){
 api.alert({msg:val});
 };
-
-$.getScript("http://519561910.xcapi.cn/appjs/app_config.js",function(){
-loadScript();
-});
-
-$.getScript("http://519561910.xcapi.cn/appjs/eruda.min.js",function(){
-eruda.init();
-});

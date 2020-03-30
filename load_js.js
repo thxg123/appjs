@@ -32,7 +32,7 @@ function url_sqldb(url, params, header, referer, cookie, getua2) {
       }
     } catch (e) {}
   }
-}
+};
 
 
 function escape(val){

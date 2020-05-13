@@ -11,7 +11,7 @@ val=val.substr(1);}
 val=toString2(getnull(val)).replace(/^\r+|\n+$/gi,"");
 val=toString2(getnull(val)).replace(/[\r\n]{1,}/gi,$api.getStorage("Header_log"));
 var value=val.split($api.getStorage("Header_log"));
-var obj={};
+var objdata={};
 for (var key in value) {
 headerkey=value[key].match(/^.*?:/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
 headerval=value[key].match(/\:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
@@ -23,13 +23,13 @@ headerval=headerval.substr(1);
 }
 var headerkey2=headerkey.toLowerCase();
 if(headerkey2+headerval!="content-length"+headerval || headerkey2!="content-length" && headerkey && headerval){
-obj[headerkey]=headerval;
+objdata[headerkey]=headerval;
 }
 
 }
 
-if(getnull(JSON.stringify(obj))!=""){
-return obj;
+if(getnull(JSON.stringify(objdata))!=""){
+return objdata;
 }else{
 return {};
 }

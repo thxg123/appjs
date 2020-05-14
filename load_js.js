@@ -12,8 +12,13 @@ var val=toString2(getnull(val)).replace(/^\r+|\n+$/gi,"").replace(/[\r\n]{1,}/gi
 var value=val.split($api.getStorage("Header_log"));
 var objdata={};
 for (var key in value) {
+try{
 headerkey=value[key].match(/^(.*?):/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
 headerval=value[key].match(/\:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
+}catch(error){
+headerkey="";
+headerval="";
+};
 if(headerkey.substr(-1) == ":"){
 headerkey=headerkey.substr(0,headerkey.lastIndexOf(":"));
 }

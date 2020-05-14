@@ -14,7 +14,7 @@ var objdata={};
 for (var key in value) {
 try{
 headerkey=value[key].match(/^(.*?):/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
-headerval=value[key].match(/\:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
+headerval=value[key].match(/:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
 }catch(error){
 headerkey="";
 headerval="";

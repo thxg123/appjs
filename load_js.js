@@ -12,10 +12,10 @@ val=val.substr(1);}
 var val=toString2(getnull(val)).replace(/^\r+|\n+$/gi,"").replace(/[\r\n]{1,}/gi,$api.getStorage("Header_log"));
 var value=val.split($api.getStorage("Header_log"));
 var objdata={};
-for (var key in value) {
+for (var i=0; len=value.length; i<len; i++) {
 try{
-headerkey=value[key].match(/^(.*?):/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
-headerval=value[key].match(/:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
+headerkey=value[i].match(/^(.*?):/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
+headerval=value[i].match(/:(.*?)$/gi)[0].replace(/(^\s*)|(\s*$)/gi,"");
 }catch(error){
 headerkey="";
 headerval="";

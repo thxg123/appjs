@@ -1,4 +1,3 @@
-$api.setStorage("cookie","");
 document.getElementById("params").setAttribute("placeholder","Body表单(不填默认GET) or @上传");
 document.getElementById("header").setAttribute("placeholder","Header请求头");
 
@@ -7,6 +6,7 @@ api.alert({msg:val});
 };
 
 function transform(val){
+$api.setStorage("cookie","");
 if(val.substr(0,1)==":"){
 val=val.substr(1);}
 var val=toString2(getnull(val)).replace(/^\r+|\n+$/gi,"").replace(/[\r\n]{1,}/gi,$api.getStorage("Header_log"));

@@ -4,3 +4,4 @@ document.getElementById("header").setAttribute("placeholder","Header请求头");
 function alert(val){
 api.alert({msg:val});
 };
+

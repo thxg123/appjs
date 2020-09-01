@@ -1,4 +1,4 @@
-document.getElementById("params").setAttribute("placeholder","Body表单(不填默认GET) or @上传");
+document.getElementById("params").setAttribute("placeholder","Body表单(不填则默认GET) or @上传");
 document.getElementById("header").setAttribute("placeholder","Header请求头");
 
 function string_replace(val){

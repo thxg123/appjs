@@ -3,10 +3,10 @@ document.getElementById("header").setAttribute("placeholder","Header请求头");
 
 function string_replace(val){
 try{
-var val=toString2(getnull(val)).replace(/[\n]{1,}/gi,"\n");
-var val=toString2(getnull(val)).replace(/(^\s*)|(\s*$)/gi,"");
+var val=getnull(toString2(val)).replace(/[\n]{1,}/gi,"\n");
+var val=getnull(toString2(val)).replace(/(^\s*)|(\s*$)/gi,"");
 return val;
-}catch(e){
+}catch(e{
 return val;
 }
 };

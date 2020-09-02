@@ -6,7 +6,7 @@ try{
 var val=getnull(toString2(val)).replace(/[\n]{1,}/gi,"\n");
 var val=getnull(toString2(val)).replace(/(^\s*)|(\s*$)/gi,"");
 return val;
-}catch(e{
+}catch(e){
 return val;
 }
 };

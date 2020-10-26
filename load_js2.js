@@ -42,10 +42,10 @@ headerkey=getnull(headerkey).replace(/(:$)/gi, "");
 }
 var headerkey2=headerkey.toLowerCase();
 if(headerkey && headerval && headerkey2+headerval!="content-length"+headerval && headerkey2!="content-length"){
-if(headerkey=="Content-Type" && headerval.match(/text\/plain;/)){
+if(headerkey=="Content-Type" && headerval.match(/text\/plain/)){
 var jstype = true;
 }
-if(headerkey=="Content-Type" && headerval.match(/application\/x-www-form-urlencoded;/) && jstype==true){
+if(headerkey=="Content-Type" && headerval.match(/application\/x-www-form-urlencoded/) && jstype==true){
 headerkey = "";
 headerval = "";
 var jstype = false;

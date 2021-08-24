@@ -2,4 +2,4 @@ String.prototype.sj=function(val,val2){try{var re=new RegExp(val+"(.*?)"+val2);v
 
 
 var str="我是一个字符串演示啊";
-alert(str.sj("是","串")); //输出 “一个字符”
+alert(str.sj("是","演")); //输出 “一个字符串”
